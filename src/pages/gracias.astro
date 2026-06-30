@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Reserva Enviada | Lambin Suite" 
+  description="Tu solicitud de reserva ha sido enviada con éxito a Lambin Suite."
+>
+  <Header />
+  
+  <main class="flex-grow flex items-center justify-center py-20 bg-navy-50/30">
+    <div class="max-w-md w-full mx-auto px-6 text-center">
+      <div class="w-20 h-20 bg-gold-500/15 text-gold-500 rounded-full flex items-center justify-center mx-auto text-4xl mb-8 animate-bounce border border-gold-500/20">
+        🔑
+      </div>
+      
+      <h1 class="text-3xl font-extrabold text-navy-900 tracking-tight">
+        ¡Reserva Recibida!
+      </h1>
+      
+      <p class="mt-4 text-navy-700/80 leading-relaxed text-sm sm:text-base">
+        Tu solicitud ha sido procesada con éxito. Nos comunicaremos contigo en los próximos minutos al celular registrado para confirmar tu llegada.
+      </p>
+      
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="/" 
+          class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-sm font-bold rounded-xl text-navy-950 bg-gold-500 hover:bg-gold-400 active:scale-95 transition-all duration-150 shadow-md shadow-gold-500/10"
+        >
+          Volver al Inicio
+        </a>
+        <a 
+          href="https://wa.me/59170000000?text=Hola,%20acabo%20de%20enviar%20mi%20formulario%20de%20reserva%20y%20quisiera%20confirmar%20por%20aqu%C3%AD."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-6 py-3 border border-navy-200/50 text-sm font-bold rounded-xl text-navy-800 bg-white hover:bg-navy-50/30 active:scale-95 transition-all duration-150"
+        >
+          Confirmar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>

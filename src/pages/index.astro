@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Rooms from '../components/Rooms.astro';
+import Location from '../components/Location.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Header />
+  <main class="flex-grow">
+    <Hero />
+    <Rooms />
+    <Location />
+    <ContactForm />
+  </main>
+  <Footer />
+</Layout>

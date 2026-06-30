@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50: #f4f6fa;
+  --color-navy-100: #e7ecf4;
+  --color-navy-200: #c9d5e7;
+  --color-navy-300: #9cb4d4;
+  --color-navy-400: #688bbc;
+  --color-navy-500: #46699e;
+  --color-navy-600: #35517e;
+  --color-navy-700: #2b4166;
+  --color-navy-800: #233e5c; /* Fondo intermedio del logo */
+  --color-navy-900: #1b2f4c; /* Fondo oscuro del logo */
+  --color-navy-950: #101c2e; /* Borde oscuro / Footer */
+
+  --color-gold-50: #fdfaf2;
+  --color-gold-100: #f7eed7;
+  --color-gold-200: #eedcaf;
+  --color-gold-300: #e2c37e;
+  --color-gold-400: #dfc27d; /* Brillo del logo */
+  --color-gold-500: #cfab4c; /* Color principal del logo */
+  --color-gold-600: #b59235; /* Sombra del logo */
+  --color-gold-700: #937127;
+  --color-gold-800: #755722;
+  --color-gold-900: #60461f;
+  --color-gold-950: #37260f;
+}
+
+/* Custom scrollbar and premium details */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold-500) var(--color-navy-900);
+}
+
+::selection {
+  background-color: var(--color-gold-500);
+  color: var(--color-navy-950);
+}

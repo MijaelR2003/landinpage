@@ -1,0 +1,94 @@
+---
+// Footer Component
+---
+
+<footer class="bg-navy-950 text-white border-t border-navy-900 pt-16 pb-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 pb-12 border-b border-navy-900">
+      
+      <!-- Column 1: Brand -->
+      <div class="md:col-span-1 space-y-4">
+        <!-- Logo matching header and logo image -->
+        <a href="#inicio" class="flex items-center space-x-2.5 group">
+          <div class="text-gold-400">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3a4 4 0 0 1 4 4c0 2.5-4 6-4 6s-4-3.5-4-6a4 4 0 0 1 4-4Z" fill="currentColor" opacity="0.15"/>
+              <path d="M12 3a4 4 0 0 1 4 4c0 2.5-4 6-4 6s-4-3.5-4-6a4 4 0 0 1 4-4Z" stroke="currentColor"/>
+              <circle cx="12" cy="7" r="0.8" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-[8px] font-bold uppercase tracking-[0.25em] text-gold-400/90 leading-none">Hospedaje</span>
+            <span class="font-brand font-bold text-sm tracking-wide text-white group-hover:text-gold-300 transition-colors duration-200">LAMBIN SUITE</span>
+          </div>
+        </a>
+        <p class="text-xs text-navy-200 leading-relaxed">
+          Tu opción número uno de alojamiento confortable, seguro e inmediato a pasos de la Terminal Bimodal de El Alto.
+        </p>
+        <div class="text-[11px] text-navy-400 font-medium">
+          Recepción abierta 24/7.
+        </div>
+      </div>
+      
+      <!-- Column 2: Navigation Links -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-navy-400 font-brand">Navegación</h4>
+        <ul class="space-y-2 text-sm text-navy-200">
+          <li><a href="#inicio" class="hover:text-gold-400 transition-colors">Inicio</a></li>
+          <li><a href="#habitaciones" class="hover:text-gold-400 transition-colors">Habitaciones y Tarifas</a></li>
+          <li><a href="#ubicacion" class="hover:text-gold-400 transition-colors">Ubicación</a></li>
+          <li><a href="#contacto" class="hover:text-gold-400 transition-colors">Reservas</a></li>
+        </ul>
+      </div>
+      
+      <!-- Column 3: Contact Info -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-navy-400 font-brand">Contacto</h4>
+        <ul class="space-y-2 text-sm text-navy-200">
+          <li class="flex items-center space-x-2">
+            <span>📞</span>
+            <span>+591 70000000</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span>✉</span>
+            <span>contacto@lambinsuite.com</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span>📍</span>
+            <span>El Alto, Bolivia</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Column 4: Quick Reserve WhatsApp Badge -->
+      <div class="space-y-4">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-navy-400 font-brand">Reservas Rápidas</h4>
+        <p class="text-xs text-navy-200 leading-relaxed">
+          Chatea directamente con nuestro recepcionista de turno por WhatsApp para reservar en el acto.
+        </p>
+        <a 
+          href="https://wa.me/59170000000?text=Hola,%20me%20gustar%C3%ADa%20consultar%20habitaciones%20disponibles."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-4 py-2 border border-gold-500/30 text-xs font-bold rounded-lg text-gold-400 bg-gold-500/5 hover:bg-gold-500/10 transition-all w-full"
+        >
+          📱 WhatsApp Recepción
+        </a>
+      </div>
+      
+    </div>
+    
+    <!-- Footer bottom -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-navy-400 gap-4">
+      <div>
+        &copy; {new Date().getFullYear()} Lambin Suite. Todos los derechos reservados.
+      </div>
+      <div class="flex space-x-4">
+        <span>Diseñado en Bolivia</span>
+        <span>•</span>
+        <span>Tecnología Astro y Tailwind CSS</span>
+      </div>
+    </div>
+    
+  </div>
+</footer>
