@@ -35,15 +35,18 @@ const rooms = [
 ];
 ---
 
-<section id="habitaciones" class="py-20 bg-navy-50/50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="habitaciones" class="py-20 bg-gradient-to-b from-navy-50/30 to-white relative">
+  <!-- Dot pattern background -->
+  <div class="absolute inset-0 bg-dot-pattern opacity-30"></div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
     <!-- Section Header -->
     <div class="text-center max-w-3xl mx-auto mb-16">
       <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
         Nuestras Habitaciones y Tarifas
       </h2>
-      <div class="h-1.5 w-20 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+      <div class="h-1.5 w-20 bg-gradient-to-r from-gold-600 via-gold-400 to-gold-600 mx-auto mt-4 rounded-full"></div>
       <p class="mt-5 text-lg text-navy-700/80">
         Precios claros y competitivos. Todas nuestras habitaciones están impecablemente limpias y listas para tu confort inmediato.
       </p>
@@ -52,23 +55,25 @@ const rooms = [
     <!-- Rooms Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {rooms.map((room) => (
-        <div class="flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg border border-navy-100/50 hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
+        <div class="gold-accent-top flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg border border-navy-100/60 hover:shadow-xl hover:shadow-gold-500/8 hover:scale-[1.02] transition-all duration-300 group">
           
           <!-- Image Container with Price Badge -->
           <div class="relative overflow-hidden aspect-[4/3] bg-navy-50">
             <img 
               src={room.image} 
               alt={room.name} 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
+            <!-- Subtle gold overlay on hover -->
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <!-- Price Badge -->
-            <div class="absolute top-4 right-4 bg-navy-950/90 text-white font-extrabold text-lg px-4 py-2 rounded-xl backdrop-blur-sm border border-navy-800">
-              <span class="text-gold-400 font-black">{room.price}</span>
+            <div class="absolute top-4 right-4 glass text-white font-extrabold text-lg px-4 py-2 rounded-xl">
+              <span class="text-gold-gradient font-black">{room.price}</span>
               <span class="text-[10px] text-navy-200 font-normal block text-right -mt-1">/ noche</span>
             </div>
             <!-- Capacity Badge -->
-            <div class="absolute bottom-4 left-4 bg-navy-900/85 text-white text-xs font-bold px-3 py-1.5 rounded-lg backdrop-blur-sm flex items-center space-x-1.5 border border-navy-800">
+            <div class="absolute bottom-4 left-4 glass text-white text-xs font-bold px-3 py-1.5 rounded-lg flex items-center space-x-1.5">
               <span>👤 {room.capacity}</span>
             </div>
           </div>
@@ -81,10 +86,10 @@ const rooms = [
             <!-- Features List -->
             <div class="border-t border-navy-100 pt-6 mb-8">
               <h4 class="text-xs font-bold uppercase tracking-wider text-navy-400 mb-4 font-brand">¿Qué incluye?</h4>
-              <ul class="grid grid-cols-2 gap-y-2 gap-x-4 text-xs font-medium text-navy-850">
+              <ul class="grid grid-cols-2 gap-y-2.5 gap-x-4 text-xs font-medium text-navy-850">
                 {room.features.map((feature) => (
                   <li class="flex items-center space-x-2">
-                    <span class="text-gold-600 text-sm">✓</span>
+                    <span class="text-gold-500 text-sm font-bold">✓</span>
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -96,7 +101,7 @@ const rooms = [
               href={`https://wa.me/59169954561?text=${encodeURIComponent(room.whatsappMessage)}`}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center px-6 py-3.5 border border-transparent text-sm font-bold rounded-xl text-navy-950 bg-gold-500 hover:bg-gold-400 active:scale-95 shadow-md shadow-gold-500/10 hover:shadow-gold-500/20 transition-all duration-150"
+              class="shimmer-btn w-full inline-flex items-center justify-center px-6 py-3.5 border border-transparent text-sm font-bold rounded-xl text-navy-950 bg-gradient-to-r from-gold-500 to-gold-400 hover:from-gold-400 hover:to-gold-300 active:scale-95 shadow-md shadow-gold-500/15 hover:shadow-gold-500/30 transition-all duration-150"
             >
               Reservar por WhatsApp
             </a>
