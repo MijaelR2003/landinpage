@@ -205,3 +205,18 @@ a, button, input, select, textarea {
   background-image: radial-gradient(circle, rgba(207, 171, 76, 0.06) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+/* ═══════════════════════════════════════════
+   ACCESSIBILITY: respect reduced motion
+   ═══════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
