@@ -1,0 +1,97 @@
+---
+// Promotions Component
+
+const promotions = [
+  {
+    id: "transito",
+    title: "Estadía Corta (Day Use)",
+    badge: "Ideal para escalas",
+    description: "Para viajeros en tránsito. Descansa, usa el WiFi y disfruta de una ducha de agua caliente por un máximo de 6 horas durante el día.",
+    price: "Desde 50 BOB",
+    image: "/images/promo_transito.png",
+    whatsappMessage: "Hola Lambin Suite, me interesa la Promoción de Estadía Corta (Day Use)."
+  },
+  {
+    id: "julio",
+    title: "Promo Mes de Julio",
+    badge: "Bebidas de Cortesía",
+    description: "¡Celebramos julio contigo! Con tu estadía te obsequiamos 2 bebidas personales de cortesía (recuerda pedirlas en recepción al ingresar).",
+    price: "2 Bebidas Gratis",
+    image: "/images/promo_julio.png",
+    whatsappMessage: "Hola Lambin Suite, me interesa la Promoción del Mes de Julio de las 2 bebidas personales de cortesía."
+  },
+  {
+    id: "anticipada",
+    title: "Reserva Anticipada Pagada",
+    badge: "10% de Descuento",
+    description: "Asegura tu habitación pagando tu reserva por adelantado (mínimo 3 días antes de tu llegada) y benefíciate de un 10% de descuento en el total.",
+    price: "-10% Total",
+    image: "/images/promo_anticipada.png",
+    whatsappMessage: "Hola Lambin Suite, quiero realizar una reserva anticipada pagada para obtener el 10% de descuento."
+  }
+];
+---
+
+<section id="promociones" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+        Promociones Especiales
+      </h2>
+      <div class="h-1.5 w-20 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+      <p class="mt-5 text-lg text-navy-700/80">
+        Aprovecha nuestras ofertas exclusivas diseñadas especialmente para viajeros en tránsito, turistas y huéspedes frecuentes.
+      </p>
+    </div>
+    
+    <!-- Promotions Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {promotions.map((promo) => (
+        <div class="flex flex-col bg-navy-900 text-white rounded-2xl overflow-hidden shadow-xl border border-navy-800 relative group hover:scale-[1.01] transition-transform duration-300">
+          
+          <!-- Image Container with Badge -->
+          <div class="relative overflow-hidden aspect-[16/10] bg-navy-950">
+            <img 
+              src={promo.image} 
+              alt={promo.title} 
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <!-- Badge on Image -->
+            <div class="absolute top-4 right-4 bg-gold-500 text-navy-950 text-[10px] uppercase font-extrabold tracking-wider px-3 py-1.5 rounded-lg shadow-md border border-gold-400">
+              {promo.badge}
+            </div>
+          </div>
+          
+          <!-- Content Container -->
+          <div class="flex flex-col flex-grow p-6 sm:p-8 justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-3 font-brand">{promo.title}</h3>
+              <p class="text-navy-200 text-sm leading-relaxed mb-6">{promo.description}</p>
+            </div>
+            
+            <!-- Price and Button -->
+            <div class="mt-6 border-t border-navy-800 pt-6">
+              <div class="flex items-baseline justify-between mb-4">
+                <span class="text-xs text-navy-300 uppercase tracking-wider font-semibold">Valor especial:</span>
+                <span class="text-xl font-extrabold text-gold-400 font-brand">{promo.price}</span>
+              </div>
+              
+              <a 
+                href={`https://wa.me/59169954561?text=${encodeURIComponent(promo.whatsappMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center px-5 py-3.5 border border-transparent text-sm font-bold rounded-xl text-navy-950 bg-gold-500 hover:bg-gold-400 active:scale-95 transition-all duration-150"
+              >
+                Reclamar Promoción
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

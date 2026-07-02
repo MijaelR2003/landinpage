@@ -3,34 +3,34 @@
 
 const rooms = [
   {
-    id: "simple",
-    name: "Habitación Individual",
-    price: "80 BOB",
-    capacity: "1 Persona",
-    image: "/images/habitacion_simple.png",
-    description: "Espacio acogedor y silencioso, ideal para viajeros individuales y profesionales que buscan un descanso reparador y total privacidad.",
-    features: ["Cama de 1.5 plazas", "Baño Privado", "Agua Caliente 24/7", "WiFi de Alta Velocidad", "TV por Cable", "Toallas y Jabón gratis"],
-    whatsappMessage: "Hola Lambin Suite, me interesa reservar la Habitación Individual de 80 BOB."
+    id: "suite-matrimonial",
+    name: "Suite Matrimonial",
+    price: "100 BOB",
+    capacity: "2 Personas",
+    image: "/images/habitacion_suite.png",
+    description: "Habitación suite alfombrada con cama matrimonial de 2 plazas. Ofrece confort y privacidad para parejas.",
+    features: ["Cama de 2 plazas", "Piso Alfombrado", "Baño Privado con Ducha", "TV Smart", "Acceso WiFi", "Toallas y amenities"],
+    whatsappMessage: "Hola Lambin Suite, me interesa reservar la Suite Matrimonial de 100 BOB."
   },
   {
-    id: "doble",
-    name: "Habitación Doble",
-    price: "130 BOB",
+    id: "suite-doble",
+    name: "Suite Doble (Dos Camas)",
+    price: "140 BOB",
     capacity: "2 Personas",
     image: "/images/habitacion_doble.png",
-    description: "Habitación amplia configurada con una cama matrimonial de 2 plazas o dos camas individuales. Perfecta para parejas o colegas.",
-    features: ["Cama Matrimonial o 2 Camas", "Baño Privado", "Agua Caliente 24/7", "WiFi de Alta Velocidad", "TV por Cable", "Amenities completos"],
-    whatsappMessage: "Hola Lambin Suite, me interesa reservar la Habitación Doble de 130 BOB."
+    description: "Habitación suite alfombrada con dos camas de plaza y media/Queen. Espacio amplio y comodidad para dos personas.",
+    features: ["Dos Camas de plaza/media", "Piso Alfombrado", "Baño Privado con Ducha", "TV Smart", "Acceso WiFi", "Toallas y amenities"],
+    whatsappMessage: "Hola Lambin Suite, me interesa reservar la Suite Doble de 140 BOB."
   },
   {
-    id: "suite",
-    name: "Suite Familiar",
-    price: "180 BOB",
-    capacity: "Hasta 4 Personas",
-    image: "/images/habitacion_suite.png",
-    description: "Nuestra habitación más exclusiva y espaciosa. Cuenta con sala de estar, cama matrimonial y dos camas simples. Ideal para familias.",
-    features: ["Cama Matrimonial + 2 Camas", "Sala de Estar integrada", "Baño Privado Amplio", "Agua Caliente 24/7", "WiFi de Alta Velocidad", "TV Smart y Amenities"],
-    whatsappMessage: "Hola Lambin Suite, me interesa reservar la Suite Familiar de 180 BOB."
+    id: "simple",
+    name: "Habitación Simple",
+    price: "Desde 50 BOB",
+    capacity: "1 Persona",
+    image: "/images/habitacion_simple.png",
+    description: "Habitación económica y acogedora con cama de 1.5 plazas y baño compartido. Ideal para estancias rápidas y descansos prácticos.",
+    features: ["Cama de 1.5 plazas", "Baño Compartido", "TV Smart", "Acceso WiFi", "Toallas y Jabón gratis", "Agua Caliente 24/7"],
+    whatsappMessage: "Hola Lambin Suite, me interesa reservar la Habitación Simple desde 50 BOB."
   }
 ];
 ---
@@ -93,7 +93,7 @@ const rooms = [
             
             <!-- CTA Button -->
             <a 
-              href={`https://wa.me/59170000000?text=${encodeURIComponent(room.whatsappMessage)}`}
+              href={`https://wa.me/59169954561?text=${encodeURIComponent(room.whatsappMessage)}`}
               target="_blank"
               rel="noopener noreferrer"
               class="w-full inline-flex items-center justify-center px-6 py-3.5 border border-transparent text-sm font-bold rounded-xl text-navy-950 bg-gold-500 hover:bg-gold-400 active:scale-95 shadow-md shadow-gold-500/10 hover:shadow-gold-500/20 transition-all duration-150"
